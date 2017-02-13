@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-0" : {
-            "cruiser13\\TextStatistics" : "src"
+            "DaveChild\\TextStatistics" : "src"
         }
     },
     "extra": {

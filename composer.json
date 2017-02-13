@@ -1,7 +1,7 @@
 {
-    "name": "davechild/textstatistics",
+    "name": "cruiser13/textstatistics",
     "description": "PHP package to measure the readability of text according to various algorithms.",
-    "homepage": "https://github.com/DaveChild/Text-Statistics",
+    "homepage": "https://github.com/Cruiser13/Text-Statistics",
     "authors": [
         {
             "name": "Dave Child",
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-0" : {
-            "DaveChild\\TextStatistics" : "src"
+            "cruiser13\\TextStatistics" : "src"
         }
     },
     "extra": {

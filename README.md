@@ -1,5 +1,7 @@
 #PHP Text Statistics
 
+Fork of the default DaveChild/Text-Statistics repository + german language function
+
 [![Build Status](https://travis-ci.org/DaveChild/Text-Statistics.svg?branch=master)](https://travis-ci.org/DaveChild/Text-Statistics) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DaveChild/Text-Statistics/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DaveChild/Text-Statistics/?branch=master) [![Code Coverage](https://scrutinizer-ci.com/g/DaveChild/Text-Statistics/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/DaveChild/Text-Statistics/?branch=master)
 
 The PHP Text Statistics class will help you to indentify issues with your website content, especially with readability.

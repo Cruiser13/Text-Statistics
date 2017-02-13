@@ -134,6 +134,40 @@ class TextStatistics
             return Maths::bcCalc($score, '+', 0, true, $this->dps);
         }
     }
+    /**
+     * Gives the Flesch-Kincaid Reading Ease of text entered rounded to one digit
+     * @param   boolean|string  $strText         Text to be checked
+     * @return  int|float
+     */
+    public function fleschKincaidReadingEaseDeutsch($strText = false)
+    {
+        $strText = $this->setText($strText);
+		
+        $score = Maths::bcCalc(
+            Maths::bcCalc(
+                180,
+                '-',
+                Maths::bcCalc(
+                    1,
+                    '*',
+                    Text::averageWordsPerSentence($strText, $this->strEncoding)
+                )
+            ),
+            '-',
+            Maths::bcCalc(
+                58.5,
+                '*',
+                Syllables::averageSyllablesPerWord($strText, $this->strEncoding)
+            )
+        );
+		
+
+        if ($this->normalise) {
+            return Maths::normaliseScore($score, 0, 100, $this->dps);
+        } else {
+            return Maths::bcCalc($score, '+', 0, true, $this->dps);
+        }
+    }
 
     /**
      * Gives the Flesch-Kincaid Grade level of text entered rounded to one digit
@@ -260,11 +294,11 @@ class TextStatistics
                             Text::sentenceCount($strText, $this->strEncoding)
                         )
                     ),
-                    'sqrt',
-                    0
+                    '+',
+                    3.1291
                 ),
-                '+',
-                3.1291
+                'sqrt',
+                0
             )
         );
 
